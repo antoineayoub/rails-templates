@@ -56,7 +56,7 @@ file 'config/puma.rb', puma_file_content, force: true
 end
 
 touch 'config/initializers/simple_form_materialize-sass.rb'
-$content=$(curl -L https://gist.githubusercontent.com/antoineayoub/a6de002da8d606999ff4f6d105798c79/raw/040b93e82b9f53e3c5a8c5156ff0b91e482ff907/gistfile1.txt)
+content=$(curl -L https://gist.githubusercontent.com/antoineayoub/a6de002da8d606999ff4f6d105798c79/raw/040b93e82b9f53e3c5a8c5156ff0b91e482ff907/gistfile1.txt)
 echo $content > 'config/initializers/simple_form_materialize-sass.rb'
 
 run "rm -rf app/assets/stylesheets"
