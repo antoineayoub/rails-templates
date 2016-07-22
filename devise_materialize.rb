@@ -19,7 +19,6 @@ gem 'uglifier'
 gem 'materialize-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'#{Rails.version >= "5" ? ", github: 'plataformatec/simple_form'" : nil}
-gem 'simple_form-materialize'
 gem 'autoprefixer-rails'
 
 group :development, :test do
