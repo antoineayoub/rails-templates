@@ -56,6 +56,10 @@ RUBY
 file 'config/puma.rb', puma_file_content, force: true
 end
 
+touch 'config/initializers/simple_form_materialize-sass.rb'
+$content=$(curl -L https://gist.githubusercontent.com/antoineayoub/a6de002da8d606999ff4f6d105798c79/raw/040b93e82b9f53e3c5a8c5156ff0b91e482ff907/gistfile1.txt)
+echo $content > 'config/initializers/simple_form_materialize-sass.rb'
+
 run "rm -rf app/assets/stylesheets"
 run "curl -L https://github.com/antoineayoub/rails-stylesheets/archive/master.zip > stylesheets.zip"
 run "unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets"
@@ -117,7 +121,6 @@ file 'README.md', markdown_file_content, force: true
 
 after_bundle do
   rake 'db:drop db:create db:migrate'
-  generate('simple_form:install', '--materialize')
   generate(:controller, 'pages', 'home', '--no-helper', '--no-assets', '--skip-routes')
   route "root to: 'pages#home'"
 
@@ -140,5 +143,5 @@ TXT
   environment 'config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }', env: 'production'
   git :init
   git add: "."
-  git commit: %Q{ -m 'Initial commit with devise template from https://github.com/lewagon/rails-templates' }
+  git commit: %Q{ -m 'Initial commit with devise materialize template from https://github.com/antoineayoub/rails-templates' }
 end
