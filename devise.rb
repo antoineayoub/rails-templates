@@ -14,10 +14,12 @@ gem 'redis'
 
 gem 'sass-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'uglifier'
-gem 'bootstrap-sass'
+gem 'materialize-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'#{Rails.version >= "5" ? ", github: 'plataformatec/simple_form'" : nil}
+gem 'simple_form-materialize'
 gem 'autoprefixer-rails'
 
 group :development, :test do
@@ -55,14 +57,15 @@ file 'config/puma.rb', puma_file_content, force: true
 end
 
 run "rm -rf app/assets/stylesheets"
-run "curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip"
+run "curl -L https://github.com/antoineayoub/rails-stylesheets/archive/master.zip > stylesheets.zip"
 run "unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets"
 
 run 'rm app/assets/javascripts/application.js'
 file 'app/assets/javascripts/application.js', <<-JS
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
+//= require jquery_ui
+//= require materialize-sprockets
 //= require_tree .
 JS
 
@@ -114,7 +117,7 @@ file 'README.md', markdown_file_content, force: true
 
 after_bundle do
   rake 'db:drop db:create db:migrate'
-  generate('simple_form:install', '--bootstrap')
+  generate('simple_form:install', '--materialize')
   generate(:controller, 'pages', 'home', '--no-helper', '--no-assets', '--skip-routes')
   route "root to: 'pages#home'"
 
