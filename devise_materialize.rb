@@ -66,7 +66,7 @@ run 'rm app/assets/javascripts/application.js'
 file 'app/assets/javascripts/application.js', <<-JS
 //= require jquery
 //= require jquery_ujs
-//= require jquery_ui
+//= require jquery-ui
 //= require materialize-sprockets
 //= require_tree .
 JS
