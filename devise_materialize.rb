@@ -11,8 +11,6 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'#{Rails.version >= "5" ? ", github: 'plataformatec/devise'" : nil}
 gem 'redis'
-
-gem 'sass-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'uglifier'
@@ -20,6 +18,12 @@ gem 'materialize-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'#{Rails.version >= "5" ? ", github: 'plataformatec/simple_form'" : nil}
 gem 'autoprefixer-rails'
+
+gem 'activeadmin', '~> 1.0.0.pre4'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'ransack',             github: 'activerecord-hackery/ransack'
+gem 'draper',              '> 3.x'
+gem 'sass-rails'
 
 group :development, :test do
   gem 'binding_of_caller'
