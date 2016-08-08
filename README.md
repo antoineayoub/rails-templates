@@ -10,7 +10,7 @@ Get a minimal rails app ready to be deployed on Heroku with Bootstrap, Simple fo
 debugging gems.
 
 ```bash
-rails _4.2.6_ new \
+rails new \
   -T --database postgresql \
   -m https://raw.githubusercontent.com/antoineayoub/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
@@ -22,7 +22,7 @@ Same as minimal **plus** a Devise install with a generated `User` model.
 
 
 ```bash
-rails _4.2.6_ new \
+rails new \
   -T --database postgresql \
   -m https://raw.githubusercontent.com/antoineayoub/rails-templates/master/devise.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
@@ -33,7 +33,7 @@ Same as minimal **plus** a Devise install with a generated `User` model.
 
 
 ```bash
-rails _5.0.0_ new \
+rails new \
   -T --database postgresql \
   -m https://raw.githubusercontent.com/antoineayoub/rails-templates/master/devise_materialize.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
