@@ -33,7 +33,7 @@ Same as minimal **plus** a Devise install with a generated `User` model.
 
 
 ```bash
-rails _4.2.6_ new \
+rails _5.0.0_ new \
   -T --database postgresql \
   -m https://raw.githubusercontent.com/antoineayoub/rails-templates/master/devise_materialize.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
