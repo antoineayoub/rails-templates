@@ -16,7 +16,7 @@ rails new \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 
-## Devise Bootstrap
+## Devise and Bootstrap
 
 Same as minimal **plus** a Devise install with a generated `User` model.
 
@@ -27,7 +27,7 @@ rails new \
   -m https://raw.githubusercontent.com/antoineayoub/rails-templates/master/devise.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
-## Devise with Materialize
+## Devise and Materialize
 
 Same as minimal **plus** a Devise install with a generated `User` model.
 
