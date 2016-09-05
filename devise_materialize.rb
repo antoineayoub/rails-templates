@@ -114,11 +114,10 @@ file 'app/views/shared/_flashes.html.erb', <<-HTML
 <% end %>
 HTML
 
-run "curl -L https://raw.githubusercontent.com/lewagon/awesome-navbars/master/templates/_navbar_wagon.html.erb > app/views/shared/_navbar.html.erb"
 
 run "rm README.rdoc"
 markdown_file_content = <<-MARKDOWN
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates)
+Rails app generated with devise and materialize
 MARKDOWN
 file 'README.md', markdown_file_content, force: true
 
