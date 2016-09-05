@@ -42,6 +42,8 @@ group :production do
 end
 RUBY
 
+run "bundle install"
+
 file ".ruby-version", RUBY_VERSION
 
 file 'Procfile', <<-YAML
