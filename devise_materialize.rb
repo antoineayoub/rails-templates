@@ -18,7 +18,6 @@ gem 'materialize-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'#{Rails.version >= "5" ? ", github: 'plataformatec/simple_form'" : nil}
 gem 'autoprefixer-rails'
-gem 'simple_form-materialize'
 
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
